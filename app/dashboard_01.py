@@ -36,9 +36,13 @@ def ler_dados_postgres():
 
 def main():
     st.set_page_config(page_title="Dashboard de Preços do Bitcoin", layout="wide")
+    url = 'https://www.linkedin.com/in/guilherme-r-pontes'
+    git = 'https://github.com/QU4TR0/ETLProjectAPIExtract'
     st.title("📊 Dashboard de Preços do Bitcoin")
-    st.write("Este dashboard exibe os dados do preço do Bitcoin coletados periodicamente em um banco PostgreSQL.")
-
+    st.write("Este dashboard foi construído como exercicio da minha jornada de estudos em Engenharia de Dados. Nele é possível analisar de maneira simplificada os dados coletados periodicamente do ETL da API preço de Bitcoin. Os dados deste ETL foram armazenados em um banco de dados PostgreSQL.")
+    st.write("Created and Deployed by Guilherme Pontes - [Linkedin](%s)" % url)
+    st.write("Repositório GitHub com o projeto - [Github](%s)" % git)
+    
     df = ler_dados_postgres()
 
     if not df.empty:
